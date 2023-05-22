@@ -1,0 +1,79 @@
+#QUESTION 1
+'''
+from math import pi
+
+class shape:
+    def __init__(self,sides):
+        self.s=sides
+
+    def area(self):
+        pass
+
+    def display(self):
+        return self.s
+    
+class circle(shape):
+    def __init__(self,radius):
+        super().__init__(0)
+        self.r=radius
+
+    def area(self):
+        return pi*self.r**2
+
+class triangle(shape):
+    def __init__(self,length):
+        super().__init__(3)
+        self.l=length
+
+    def area(self):
+        #using formula of equilateral triangle
+        return (1.73*self.l*self.l)/4
+
+
+
+def main():
+    obj1=triangle(4)
+    obj2=circle(3)
+    print("area of triangle: ",obj1.area())
+    print("sides of a triangle: ",obj1.display())
+    print("area of circle: ",obj2.area())
+    print("sides of a circle: ",obj2.display())
+    
+    
+main()
+'''
+
+#QUESTION 2
+'''
+class employee:
+    def __init__(self,name,Id,salary):
+        self.n=name
+        self.i=Id
+        self.s=salary
+
+    def status(self):
+        print("Name is: ",self.n)
+        print("ID is: ",self.i)
+        print("Salary is: ",self.s)
+
+class bm(employee):
+    def __init__(self,name,Id,salary):
+        super().__init__(name,Id,salary)
+
+class pm(employee):
+    def __init__(self,name,Id,salary):
+        super().__init__(name,Id,salary)
+
+class lm(employee):
+    def __init__(self,name,Id,salary):
+        super().__init__(name,Id,salary)
+
+def main():
+    array=[]
+    array.append(bm("nofel",1,10000))
+    array.append(pm("faraz",2,12000))
+    array.append(lm("abdullah",3,15000))
+    for i in array:
+        i.status()
+main()
+'''
